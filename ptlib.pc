@@ -1,0 +1,58 @@
+prefix=/usr
+exec_prefix=${prefix}
+libdir=${exec_prefix}/lib
+includedir=${prefix}/include
+cxxflags= -felide-constructors -Wreorder
+suffix=
+machtype=x86
+ostype=Darwin
+objdir=obj_Darwin_x86${suffix}
+
+Name: ptlib
+Description: PT Library
+Version: 2.6.7
+Libs: -L${libdir} -lpt${suffix}  -lpthread -lsasl2 -lldap -llber -lldap_r -L/opt/local/lib -lssl -lcrypto -lz   -lexpat  -lodbc  -lresolv -lc 
+Cflags: -I${includedir}  -DPTRACING=1 -D_REENTRANT  -I/opt/local/include      -fno-exceptions
+
+PTLIB_IPV6=yes
+PTLIB_RESOLVER=yes
+PTLIB_OPENSSL=yes
+PTLIB_OPENSSL_AES=yes
+PTLIB_OPENLDAP=yes
+PTLIB_SASL=no
+PTLIB_SASL2=yes
+PTLIB_EXPAT=yes
+PTLIB_REGEX=yes
+PTLIB_SDL=no
+PTLIB_VIDEO_CAPTURE=yes
+
+PTLIB_TTS=yes
+PTLIB_ASN=yes
+PTLIB_STUN=yes
+PTLIB_PIPECHAN=yes
+PTLIB_DTMF=yes
+PTLIB_WAVFILE=yes
+PTLIB_SOCKS=yes
+PTLIB_FTP=yes
+PTLIB_SNMP=yes
+PTLIB_TELNET=yes
+PTLIB_REMCONN=yes
+PTLIB_SERIAL=yes
+PTLIB_POP3SMTP=yes
+PTLIB_AUDIO=yes
+PTLIB_VIDEO=yes
+PTLIB_SHM_VIDEO=yes
+
+PTLIB_VXML=yes
+PTLIB_JABBER=yes
+PTLIB_XMLRPC=yes
+PTLIB_SOAP=yes
+PTLIB_URL=yes
+PTLIB_HTTP=yes
+PTLIB_HTTPFORMS=yes
+PTLIB_HTTPSVC=yes
+PTLIB_CONFIG_FILE=yes
+PTLIB_SOCKAGG=yes
+PTLIB_VIDFILE=yes
+PTLIB_ODBC=yes
+
